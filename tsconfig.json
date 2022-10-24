@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // "module": "es6",
+    "target": "es6",
+    "allowJs": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "react",
+    // "baseUrl": "./",
+    "paths": {
+      "App/*": [
+        "./src/*"
+      ],
+      "Components": [
+        "./src/components"
+      ],
+      "Components/*": [
+        "./src/components/*"
+      ],
+      "Hooks/*": [
+        "./src/hooks/*"
+      ],
+      "HOCs": [
+        "./src/hoc"
+      ],
+      "HOCs/*": [
+        "./src/hoc/*"
+      ],
+      "Modals/*": [
+        "./src/modals/*"
+      ],
+      "Service": [
+        "./src/service"
+      ],
+      "Service/*": [
+        "./src/service/*"
+      ],
+      "Pages/*": [
+        "./src/pages/*"
+      ],
+      "Util": [
+        "./src/util"
+      ],
+      "Util/*": [
+        "./src/util/*"
+      ],
+    }
+  },
+  "include": [
+    "src"
+  ]
+}
