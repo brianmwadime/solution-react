@@ -3,14 +3,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { postRegister } from "Service/api";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import useForm from "Hooks/useForm";
 import * as yup from "yup";
+import PhoneInput, {
+  isValidPhoneNumber,
+  parsePhoneNumber,
+} from 'react-phone-number-input';
+import usePageTitle from "Hooks/usePageTitle";
 import {
-  Row,
-  Column,
   Img,
   Text,
+  ErrorMessage,
   Line,
   PagerIndicator,
   Input,
@@ -19,13 +22,28 @@ import {
 } from "Components";
 
 const RegisterationPage = () => {
-
+  usePageTitle('Solution - Register');
   const navigate = useNavigate();
+
+  yup.addMethod(yup.string, "validMobileNo", function (errorMessage) {
+    return this.test(`valid-mobile-no`, errorMessage, function (value) {
+      const { path, createError } = this;
+
+      return (
+        (value && isValidPhoneNumber(value)) ||
+        createError({ path, message: errorMessage })
+      );
+    });
+  });
 
   const formValidationSchema = yup.object().shape({
     username: yup.string().required("Username is required"),
     password: yup.string().required("Password is required"),
     userType: yup.number().required("User type is required"),
+    mobileNo: yup
+      .string()
+      .required("Mobile no is required")
+      .validMobileNo("Phone number is not valid"),
     email: yup
       .string()
       .matches(
@@ -55,7 +73,7 @@ const RegisterationPage = () => {
       })
       .catch((err) => {
         console.error(err);
-        toast.error("Try again later.");
+        toast.error(err.message);
       });
   }
 
@@ -127,6 +145,21 @@ const RegisterationPage = () => {
                 name="rectangle One"
                 placeholder=""
                 variant="OutlineBluegray100" />
+
+            </div>
+            <div className="mb-6 w-full">
+              <label className="font-semibold text-[16px] text-black_901 w-[auto]">
+                Phone number
+              </label>
+              <PhoneInput
+                className="outline outline-[1px] rounded-radius5 outline-bluegray_100"
+                placeholder="Enter phone number"
+                value={form?.values?.mobileNo}
+                onChange={(value) => {
+                  console.log(value);
+                  form.handleChange("mobileNo", value);
+                }} />
+              {!!form?.errors?.mobileNo && <ErrorMessage errors={form?.errors?.mobileNo} />}
             </div>
             <div className="mb-6 w-full">
               <label className="font-semibold text-[16px] text-black_901 w-[auto]">

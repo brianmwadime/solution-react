@@ -18,7 +18,7 @@ import {
 import usePageTitle from "Hooks/usePageTitle";
 
 const LoginPage = (props) => {
-  usePageTitle('Solution - Login')
+  usePageTitle('Solution - Login');
   const form = useForm({ username: "", password: "" });
   const navigate = useNavigate();
 
