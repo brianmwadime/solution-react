@@ -41,7 +41,7 @@ const Input = React.forwardRef((props: Props, ref: any) => {
                     rows={rows}
                     style={{ resize: 'none' }}
                     maxLength={500}
-                    className={cn('p-2 border border-gray-light bg-white w-full rounded', className, { 'pl-10': icon })}
+                    className={cn('p-2 outline outline-bluegray_100 border-0 outline-[1px] bg-white w-full rounded', className, { 'pl-10': icon })}
                     {...rest}
                 />
             ) : (
@@ -49,7 +49,7 @@ const Input = React.forwardRef((props: Props, ref: any) => {
                     ref={ref}
                     type={type}
                     style={{ height: '36px' }}
-                    className={cn('p-2 border border-gray-light bg-white w-full rounded', className, { 'pl-10': icon })}
+                    className={cn('p-2 outline outline-bluegray_100 border-0 outline-[1px] bg-white w-full rounded', className, { 'pl-10': icon })}
                     {...rest}
                 />
             )}

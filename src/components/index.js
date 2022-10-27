@@ -25,6 +25,7 @@ import { FilterBar } from "./FilterBar";
 import { TextArea } from "./TextArea";
 import { Radio } from "./Radio";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { Avatar } from "./Avatar";
 import ManageSongsTable from "./DynamicForm/ManageSongsTable";
 import NoContent from "./NoContent";
 export {
@@ -57,7 +58,7 @@ export {
   NoContent,
   ProtectedRoute,
   ManageSongsTable,
-
+  Avatar,
 };
 
 export { default as Form } from './Form';

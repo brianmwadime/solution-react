@@ -1,0 +1,38 @@
+.react-profile-avatar {
+  position: relative;
+  display: inline-block;
+}
+.react-profile-avatar .avatar{
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  color: white;
+  background-color: gray; 
+  text-align: center;
+  font-size: 18px;
+  line-height: 34px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  padding-left: 1px;
+}
+.react-profile-avatar .avatar.hoverable {
+  cursor: pointer;
+}
+.react-profile-avatar .avatar.hoverable:hover {
+  opacity: .7;
+}
+.react-profile-avatar .avatar img{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.react-profile-avatar .avatar-border {
+  border: 2px solid gray;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  padding: 1px;
+  display: inline-block;
+}
