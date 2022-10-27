@@ -7,13 +7,18 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    // "module": "es6",
+    "module": "CommonJS",
     "target": "es6",
     "allowJs": true,
     "isolatedModules": true,
     "moduleResolution": "node",
     "noEmit": true,
     "jsx": "react",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
     // "baseUrl": "./",
     "paths": {
       "App/*": [
@@ -56,5 +61,8 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

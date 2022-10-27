@@ -1,4 +1,3 @@
-import usePageTitle from "App/hooks/usePageTitle";
 import {fetchProfile} from "Service/api";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -23,7 +22,6 @@ class AccountPage extends React.Component {
     fetchProfile()
     .then(response => response.data)
       .then((account) => {
-        console.log("Account:", account);
         this.setState({account: account}) ;
 
        
@@ -37,7 +35,6 @@ class AccountPage extends React.Component {
 
   render() {
     const {account} = this.state;
-    console.log(this.state.account);
     return (
       <>
       <Column className="bg-white_A700 font-poppins min-h-screen">
@@ -54,7 +51,7 @@ class AccountPage extends React.Component {
                 <div className="flex items-center">
                     <div className={styles.left}>
                         <h4 className="text-lg mb-4">{'Profile'}</h4>
-                        <div className={styles.info}>{'Your email address is your identity on OpenReplay and is used to login.'}</div>
+                        <div className={styles.info}>{'Your settings'}</div>
                     </div>
                     <div>
                         <Settings account={account} />
