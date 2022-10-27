@@ -44,7 +44,13 @@ defaultAxios.interceptors.response.use((response) => {
 }, async function (error) {
   if (error.response?.status === 401) {
     customBrowserHistory.push('/login');
+    return Promise.resolve();
   }
+
+  if (error.response?.status === 422) {
+    return Promise.reject(error.response?.data);
+  }
+
   return Promise.reject(error);
 });
 

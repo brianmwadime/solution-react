@@ -1,4 +1,5 @@
 @import 'react-toastify/dist/ReactToastify.css';
+@import 'react-phone-number-input/style.css';
 
 * {
   box-sizing: border-box;
@@ -132,6 +133,14 @@ li:hover{
 
 .input-container input {
   transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.PhoneInputInput {
+  border-width: 0;
+}
+
+.PhoneInputCountry {
+  margin-left: var(--PhoneInputCountrySelect-marginRight);
 }
 
 @media (min-width: 0px) {
