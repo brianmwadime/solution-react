@@ -1,6 +1,6 @@
 import React from "react";
 
-import { fetchSongs, fetchAlbums, deleteAlbum, deleteSong, ASSETS_URL } from "Service/api";
+import { fetchSongs, fetchAlbums, deleteAlbum, deleteSong, URL } from "Service/api";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -378,7 +378,7 @@ const MusicPage = () => {
                                         </th>
                                         <td className="py-4 px-6">
                                           <Img
-                                            src={song?.artwork != null ? `${ASSETS_URL}${song?.artwork}` : "images/noImage.svg"}
+                                            src={song?.artwork != null ? `${URL}${song?.artwork}` : "images/noImage.svg"}
                                             className="w-[50px]"
                                             alt="avatar"
                                           />
@@ -524,7 +524,7 @@ const MusicPage = () => {
                                         </th>
                                         <td className="py-4 px-6">
                                           <Img
-                                            src={album?.artwork != null ? `${ASSETS_URL}${album?.artwork}` : "images/noImage.svg"}
+                                            src={album?.artwork != null ? `${URL}${album?.artwork}` : "images/noImage.svg"}
                                             className="w-[50px]"
                                             alt="avatar" />
                                         </td>
