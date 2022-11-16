@@ -1,6 +1,5 @@
 # Design System
 
-All the design has been generated with [tailwindcss](https://tailwindcss.com/).
 Find all the theme related configuration inside tailwind.config.js
 
 # Running the storybook
@@ -14,18 +13,6 @@ We have detected common components and have generated possible variants of it. T
 ## Run the Storybook
 
       npm run storybook
-
-<div>
-  <h1 align="center">Getting Started with React Figma Web 🚀 </h1>
-  <strong>
-    Generated with ❤️ from Dhiwise
-  </strong>
-  <p>
-    This is the documentation of React Figma Web.
-    It holds all the info you need to get started with
-    and make changes to your App
-  </p>
-</div>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
