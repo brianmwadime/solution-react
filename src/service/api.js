@@ -1,8 +1,6 @@
 import { apis } from "Service";
 
-const URL = "https://ssolution.azurewebsites.net";
-
-const ASSETS_URL = "https://ssolution.azurewebsites.net/";
+const URL = "https://ea5f-102-140-213-230.ngrok.io";
 
 const API_URLS = {
   CATEGORY_LIST: `${URL}/client/api/v1/category/list`,
@@ -25,7 +23,7 @@ const API_URLS = {
   FILE_UPLOAD: `${URL}/client/api/v1/upload`,
 };
 
-export { URL, ASSETS_URL };
+export { URL, };
 
 export const fetchProfile = (payload) =>
   apis.get(API_URLS.GET_PROFILE, {
